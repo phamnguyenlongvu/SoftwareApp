@@ -1,0 +1,21 @@
+﻿<Application x:Class="SwitchBetweenMultipleViews.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SwitchBetweenMultipleViews"
+             xmlns:views="clr-namespace:SwitchBetweenMultipleViews.Views"
+             xmlns:viewmodels="clr-namespace:SwitchBetweenMultipleViews.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
+            <views:HomeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:AccountViewModel}">
+            <views:AccountView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:MenuViewModel}">
+            <views:MenuView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>
